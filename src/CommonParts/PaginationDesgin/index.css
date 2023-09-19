@@ -1,0 +1,16 @@
+.pagination--design {
+  margin-top: calc((8 / 14.4) * 2rem);
+  margin-bottom: calc((8 / 14.4) * 2rem);
+}
+
+.ant-pagination-options {
+  display: none !important;
+}
+
+.ant-pagination-item a,
+.ant-pagination-item-active,
+.ant-pagination-item-active a {
+  font-family: var(--primay--font-family) !important;
+  border-color: black !important;
+  color: black !important;
+}

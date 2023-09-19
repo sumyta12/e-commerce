@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --primay--card-background:#f7f7f7;
+  --primay--font-family: "Bebas Neue", sans-serif;
+  --bold-size: 53.3333px;
+  --middle-size: 12.4444px;
+  --card-font-size: 12.8px;
+  --small-size: 10.6667px;
+  --font-primay-color: rgb(0, 0, 0);
+  --discount-color-text: #d90707;
+}
+
+
+body{
+  /* width: 1200px; */
+  margin: 0 auto;
+  font-family: var(--primay--font-family)
+}
+
+.w-100{
+  width: 100%;
+}
+
+.font-family{
+  font-family: var(--primay--font-family);
+}
+
+.card-font-size{
+  font-size: var(--card-font-size);
+}
+
+
+
+.flex {
+  display: flex;
+}
+
+.justify-content {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-items {
+  align-items: center;
+}

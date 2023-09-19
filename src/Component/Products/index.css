@@ -1,0 +1,17 @@
+.hero-1 {
+  width: 40%;
+}
+
+.hero-2 {
+  width: 40%;
+  text-align: justify;
+}
+
+.hero-2 h1 {
+  font-size: var(--bold-size);
+}
+
+.main--product{
+  margin-left: 0px !important;
+}
+
