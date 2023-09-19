@@ -4,10 +4,10 @@ import { reducer } from "../../Reducer/ProductTotalReducer/ProductTotal";
 const UseEffectOfProduct = (number = 1) => {
   const [state, dispatch] = useReducer(reducer, { total: 0 });
   const [product, setProduct] = useState(null);
- 
+
   useEffect(() => {
     const controller = new AbortController();
-    const url = `https://fitsole.shop/_next/data/E4pRpCoJWMQPVFUQhz1FH/products/essentials-3-stripes-t-shirt.json?slug=essentials-3-stripes-t-shirt`;
+    const url = `./data.json`;
     fetch(url, { signal: controller.signal })
       .then((response) => response.json())
       .then((data) => {
@@ -20,8 +20,6 @@ const UseEffectOfProduct = (number = 1) => {
         const n = parseInt(number.number) - 1;
 
         setProduct(data.data.products.slice(n * 24, n * 24 + 24));
-
-        
       })
       .catch((error) => {
         console.log(error);

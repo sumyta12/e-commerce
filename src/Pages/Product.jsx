@@ -12,9 +12,9 @@ const ProductPage = () => {
 
   return (
     <>
-      <HomeSection/>
+     
 
-      <ProductheroSection />
+  
 
       <ProductFrilter
         onChange={(event) => {
