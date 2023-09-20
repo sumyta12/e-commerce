@@ -39,15 +39,14 @@ export default function CardDesign({
       return <li key={i}>{item}</li>;
     });
 
-  console.log(title,seletednodes);
+  // console.log(title,seletednodes);
 
   return (
-    <div 
+    <div
       className="card"
       onClick={() => {
         console.log(rest);
-      }}
-    >
+      }}>
       <div className="card-img">
         <div className="wishlist--css">
           <h3>Add to WishList</h3>
@@ -69,11 +68,7 @@ export default function CardDesign({
                 }}
               />
 
-              <ul>
-                {insert(select).map((item, i) => {
-                  return <li key={i}>{item}</li>;
-                })}
-              </ul>
+              <ul>{result}</ul>
 
               <MdOutlineKeyboardArrowRight
                 style={totalslice === select ? style : {}}
