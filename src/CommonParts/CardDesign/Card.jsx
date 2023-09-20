@@ -17,14 +17,14 @@ export default function CardDesign({
   } = {},
   priceRange: {
     minVariantPrice: {
-      amount: p_amount = "0.00",
-      currencyCode: p_currencyCode = "0.00",
+      amount: p_amount = "",
+      currencyCode: p_currencyCode = "",
     } = {},
   } = {},
   compareAtPriceRange: {
     minVariantPrice: {
-      amount: c_amount = "0.0",
-      currencyCode: c_currencyCode = "0.0",
+      amount: c_amount = "",
+      currencyCode: c_currencyCode = "",
     } = {},
   } = {},
   variants: { nodes: nodes = [] } = {},
@@ -39,16 +39,25 @@ export default function CardDesign({
 
   const totalslice = Math.ceil(seletednodes.length / 3) - 1 || 0;
 
-  const result = seletednodes
-    ?.slice(select * 3, select * 3 + 3)
-    .map((item, i) => {
-      return <li key={i}>{item}</li>;
-    });
+  //const result = seletednodes?.slice(select * 3, select * 3 + 3);
+  
+  function insert(params) {
+    const newarr = [];
+    const length = params * 3 + 3;
+    for (let i = params * 3; i < length; i++) {
+      newarr.push(seletednodes[i]);
+    }
+    return newarr;
+  }
+   
 
-  console.log(title,seletednodes);
+  
+
+
+  //console.log(title, seletednodes);
 
   return (
-    <div
+    <div 
       className="card"
       onClick={() => {
         console.log(rest);
@@ -73,7 +82,13 @@ export default function CardDesign({
                   }
                 }}
               />
-              <ul>{result}</ul>
+
+              <ul>
+                {insert(select).map((item, i) => {
+                  return <li key={i}>{item}</li>;
+                })}
+              </ul>
+
               <MdOutlineKeyboardArrowRight
                 style={totalslice === select ? style : {}}
                 onClick={(event) => {

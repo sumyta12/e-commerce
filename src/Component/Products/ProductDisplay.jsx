@@ -6,12 +6,14 @@ import { filterProduct } from "./FilterCases";
 const ProductDisplay = ({ number, select = "" }) => {
   const { product } = UseEffectOfProduct(number);
 
+  console.log(number);
+
   if (product === null) return <Spin size="large" />;
 
   const ProductRender = filterProduct(select, product)?.map((item, i) => {
     return (
       <Col
-        key={i}
+        key={item.id}
         xs={{
           span: 24,
         }}
